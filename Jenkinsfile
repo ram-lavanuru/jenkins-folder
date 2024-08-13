@@ -18,7 +18,7 @@ pipeline {
 
                 }
                 else 
-                println (do learn k8s)
+                println ("do learn k8s")
                 }
 
 

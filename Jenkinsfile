@@ -14,11 +14,11 @@ pipeline {
                 def course = "k88s"
                 if (course == "k8s")
                 {
-                    println ("succesfully enrolled to $course")
+                    println (succesfully enrolled to $course)
 
                 }
                 else 
-                println ("do learn k8s")
+                println (do learn k8s)
                 }
 
 

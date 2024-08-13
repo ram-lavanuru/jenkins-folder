@@ -9,6 +9,7 @@ pipeline {
         }
         stage ('second stage') {
             steps {
+                script {
                 echo "script will start"
                 def course = "k8s"
                 if (course == "k8s")
@@ -18,9 +19,10 @@ pipeline {
                 }
                 else 
                 println ("do learn k8s")
+                }
 
-                }}
-            }
 
+                }
+                }
             }
        

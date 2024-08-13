@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                 echo "script will start"
-                def course = "k8s"
+                def course = "k88s"
                 if (course == "k8s")
                 {
                     println ("succesfully enrolled to $course")

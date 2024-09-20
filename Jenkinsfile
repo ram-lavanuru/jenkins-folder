@@ -1,5 +1,5 @@
 pipeline {
-    aganet any
+    agent any
     parameters {
         string(name: 'CHANGE_NUM', defaultValue: 'CHG12345', description: 'Enter the change number')
         booleanParam(name: 'is SRE approved', defaultValue: "true", description: 'is approval taken')
@@ -8,13 +8,17 @@ pipeline {
         credentials(name: 'mycreds', description: 'mydockercreds', required: 'true')
     }
     stage ('DeployToDev') {
-        echo "deployed to dev"
+        steps{
+            echo "deployed to dev"
+        }
     }
     stage ('DeployToProd') {
+        steps {
         echo "your change ticket number is ${params.CHANGE_NUM}"
         echo "deploy to prod"
         echo "this release is ${params.RELEASE}"
         echo "your passowrd is ${params.password}"
         echo "selected credentials are ${mycreds}"
+        }
     }
 }

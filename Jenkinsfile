@@ -7,6 +7,7 @@ pipeline {
         password(name: 'password', defaultValue: 'admin123', description: 'enter the password')
         credentials(name: 'mycreds', description: 'mydockercreds', required: 'true')
     }
+    stages {
     stage ('DeployToDev') {
         steps{
             echo "deployed to dev"
@@ -20,5 +21,6 @@ pipeline {
         echo "your passowrd is ${params.password}"
         echo "selected credentials are ${mycreds}"
         }
+    }
     }
 }

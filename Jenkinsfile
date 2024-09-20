@@ -10,10 +10,10 @@ pipeline {
             when {
                 //if branch is production or staging we need to deploy
                 expression { BRANCH_NAME ==~ /(production|staging)/}
+            }
                 steps {
                     echo "deploying to production "
                 }
-            }
         }
     }
 }

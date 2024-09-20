@@ -43,7 +43,7 @@ pipeline {
     stages {
         stage ('buid') {
             steps {
-                'echo building the app'
+                echo 'building the app'
             }
         }
         stage ('anyOfstage') {

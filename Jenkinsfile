@@ -32,6 +32,11 @@ pipeline {
             }
         }
         stage ("deploy to prod") {
+            input {
+                message "is everything good to deploy to prod ?"
+                ok "yes"
+                submitter "admin"  //Active Directory or jenkins database user name
+            }
             steps {
                 echo "deploying to prod"
             }

@@ -32,6 +32,9 @@ pipeline {
             }
         }
         stage ("deploy to prod") {
+            options {
+                timeout(time: 10, unit: 'SECONDS')
+            }
             input {
                 message "is everything good to deploy to prod ?"
                 ok "yes"

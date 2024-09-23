@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    stages {
+        stage ('build') {
+            steps {
+                //error ('build failed')
+                echo "building the app"
+            }
+        }
+    }
+    post {
+        success {
+            echo "pipelien got success"
+        }
+        failure {
+            echo "pipeline got failed "
+        }
+        always {
+            echo "pipeline completed"
+        }
+    }
+}
